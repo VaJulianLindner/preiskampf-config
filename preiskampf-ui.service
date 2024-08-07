@@ -1,0 +1,17 @@
+[Unit]
+Description=updates and runs the preiskampf-ui rust server
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/projects/preiskampf-ui
+Environment="RELEASE=1"
+ExecStartPre=git fetch origin
+ExecStartPre=git reset --hard origin/master
+ExecStartPre=/home/ubuntu/.nvm/versions/node/v20.11.1/bin/npm install
+ExecStartPre=/home/ubuntu/.nvm/versions/node/v20.11.1/bin/npm run build
+ExecStart=/home/ubuntu/.cargo/bin/cargo run --release
+ExecStartPost=/home/ubuntu/.nvm/versions/node/v20.11.1/bin/node ./post_build.js
+
+[Install]
+WantedBy=multi-user.target
