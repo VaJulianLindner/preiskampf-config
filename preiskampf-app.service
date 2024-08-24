@@ -1,0 +1,17 @@
+[Unit]
+Description=updates and runs the preiskampf-app rust server
+
+[Service]
+Type=simple
+User=preiskampf
+WorkingDirectory=/home/preiskampf/projects/preiskampf-app
+Environment="RELEASE=1"
+ExecStartPre=git fetch origin
+ExecStartPre=git reset --hard origin/master
+ExecStartPre=/home/preiskampf/.nvm/versions/node/v20.11.1/bin/npm install
+ExecStartPre=/home/preiskampf/.nvm/versions/node/v20.11.1/bin/npm run build
+ExecStart=/home/preiskampf/.cargo/bin/cargo run --release
+ExecStartPost=/home/preiskampf/.nvm/versions/node/v20.11.1/bin/node ./post_build.js
+
+[Install]
+WantedBy=multi-user.target
