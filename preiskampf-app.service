@@ -6,6 +6,8 @@ Type=simple
 User=preiskampf
 WorkingDirectory=/home/preiskampf/projects/preiskampf-app
 Environment="RELEASE=1"
+Environment="DB_USER=GETTHATSECRET"
+Environment="DB_PASSWORD=xxx"
 ExecStartPre=git fetch origin
 ExecStartPre=git reset --hard origin/master
 ExecStartPre=/home/preiskampf/.nvm/versions/node/v20.11.1/bin/npm install
