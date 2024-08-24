@@ -42,6 +42,7 @@ nvm install v20.11.1
 * install rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt install build-essential
 ```
 * install/setup script to run everything, distribute this repo's files to destination dirs
 ```
