@@ -1,1 +1,1 @@
-sudo systemctl restart preiskampf-ui.service
+sudo systemctl restart preiskampf-app.service

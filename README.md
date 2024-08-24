@@ -57,4 +57,5 @@ sudo cp ~/projects/preiskampf-config/restart_preiskampf_ui_service.sh /opt/scrip
 sudo cp ~/projects/preiskampf-config/preiskampf-app.service /etc/systemd/system/preiskampf-app.service
 sudo systemctl enable preiskampf-app
 sudo systemctl daemon-reload
+sudo systemctl start preiskampf-app
 ```
