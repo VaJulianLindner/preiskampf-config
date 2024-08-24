@@ -44,7 +44,7 @@ nvm install v20.11.1
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt install build-essential
 ```
-* install/setup script to run everything, distribute this repo's files to destination dirs
+* install/setup script to run everything, distribute this repo's files to destination dirs, add env DB_USER and DB_PASSWORD in service config file
 ```
 cp ~/projects/preiskampf-config/Caddyfile /etc/caddy/Caddyfile
 sudo systemctl reload caddy
