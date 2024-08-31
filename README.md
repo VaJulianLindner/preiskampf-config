@@ -49,14 +49,20 @@ sudo apt install build-essential
 cp ~/projects/preiskampf-config/Caddyfile /etc/caddy/Caddyfile
 sudo systemctl reload caddy
 systemctl status caddy
-```
-```
-sudo mkdir /opt/scripts
-sudo cp ~/projects/preiskampf-config/restart_preiskampf_ui_service.sh /opt/scripts/restart_preiskampf_ui_service.sh
+```s/restart_preiskampf_ui_service.sh
 ```
 ```
 sudo cp ~/projects/preiskampf-config/preiskampf-app.service /etc/systemd/system/preiskampf-app.service
 sudo systemctl enable preiskampf-app
 sudo systemctl daemon-reload
 sudo systemctl start preiskampf-app
+```
+* restarting the service is a change to systemd and thus requires sudo. Setup passwordless sudo for preiskampf user then copy the script to it's location
+```
+sudo visudo
++ preiskampf ALL=(ALL) NOPASSWD: ALL
+```
+```
+sudo mkdir /opt/scripts
+sudo cp ~/projects/preiskampf-config/restart_preiskampf_ui_service.sh /opt/script
 ```
