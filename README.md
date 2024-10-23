@@ -60,7 +60,7 @@ sudo systemctl start preiskampf-app
 * restarting the service is a change to systemd and thus requires sudo. Setup passwordless sudo for preiskampf user then copy the script to it's location
 ```
 sudo visudo
-+ preiskampf ALL=(ALL) NOPASSWD: ALL
+>> preiskampf ALL=(ALL) NOPASSWD: ALL
 ```
 ```
 sudo mkdir /opt/scripts

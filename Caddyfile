@@ -1,4 +1,5 @@
 preiskampf.julian-lindner.com {
+	encode gzip zstd
         reverse_proxy localhost:4000
 }
 
