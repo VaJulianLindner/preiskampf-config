@@ -22,6 +22,10 @@ git clone git@github.com:VaJulianLindner/preiskampf-config.git
 git clone git@github.com:VaJulianLindner/preiskampf-app.git
 ```
 * create DNS Records for the static ip
+* install pkgs to compile openssl into binary
+```
+sudo apt install openssl libssl-dev pkg-config
+```
 
 
 ## Script Steps (to be implemented)
