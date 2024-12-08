@@ -53,7 +53,10 @@ sudo apt install build-essential
 cp ~/projects/preiskampf-config/Caddyfile /etc/caddy/Caddyfile
 sudo systemctl reload caddy
 systemctl status caddy
-```s/restart_preiskampf_ui_service.sh
+```
+```
+sudo mkdir /opt/scripts
+sudo cp ~/projects/preiskampf-config/restart_preiskampf_ui_service.sh /opt/scripts/restart_preiskampf_ui_service.sh
 ```
 ```
 sudo cp ~/projects/preiskampf-config/preiskampf-app.service /etc/systemd/system/preiskampf-app.service
